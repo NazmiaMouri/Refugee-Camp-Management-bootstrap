@@ -14,59 +14,70 @@
 <body>
   <nav class='navbar navbar-dark navbar-expand-sm fixed-top'>
     <div class='container'>
-      <a class='navbar-brand mr-auto' href='#'><img src='logo2.png' heigh='75' width='90'></a>
+      <a class='navbar-brand mr-auto' href='./index.html'><img src='logo2.png' heigh='60' width='90'></a>
         <div class='collapse navbar-collapse' id='navbar'>
           <ul class='navbar-nav mr-auto'>
-            <li class='nav-item active'><a class='nav-link' href='#'><span class='fa fa-home fa-lg'></span> Home</a></li>
+            <li class='nav-item '><a class='nav-link' href='./index.html'><span class='fa fa-home fa-lg'></span> Home</a></li>
             <li class='nav-item'><a class='nav-link' href='#'><span class=' fa fa-info fa-lg'></span> About Us</a></li>
             <li class='nav-item'><a class='nav-link' href='#'><span class='fa fa-address-card fa-lg'></span> Contact</a></li>
           </ul>
-          <button type="button" class="btn  bg-primary" onclick='index.html'>Log Out</button>
+          <button type="button" class="btn  bg-primary" >Log Out</button>
         </div>
     </div>
   </nav>
-<div class='container'>
-  <div id="sidebar" class='nav-side-menu'>
-    <div class ='menu-list'>
 
 
-    <ul class='menu-content'>
-    <li><a href ="file:///G:/Camp%20Management/underarea.html">Area1</a></li>
-    <li><a href ="#">Area2</a></li>
-    <li><a href ="#">Area3</a></li>
-    <li><a href ="#">Area4</a></li>
-    <li><a href ="#">Area5</a></li>
-    </ul>
+   <div id="sidebar" class='nav-side-menu d-block'>
+      <div class ='menu-list'>
+        <ul class='menu-content'>
+          <li><a href ="file:///G:/Camp%20Management/underarea.html">Area1</a></li>
+          <li><a href ="#">Area2</a></li>
+          <li><a href ="#">Area3</a></li>
+          <li><a href ="#">Area4</a></li>
+          <li><a href ="#">Area5</a></li>
+        </ul>
+      </div>
+  </div>
+<div class='container ' id='c1'>
+  <div class='row'>
+    <div class='col-4'>
+      <div class="card1 form-group ">
+        <img src="male.png" alt="male" style="width:100%">
+        
+            <button type="button" class="btn btn-primary my-1 " onclick="">Male</button> 
+        
+      </div>
+    </div> 
+
+    <div class='col-4'>
+      <div class="card2 form-group">
+        <img src="female.png" alt="female" style="width:100%">
+        
+            <button type="button" class="btn btn-primary my-1" onclick="">Female</button> 
+        
+      </div>
+    </div>  
+  </div>
+  <div class='row'>
+    <div class='col-4'>
+      <div class="card3 form-group">
+        <img src="kids.png" alt="kid" style="width:100%">
+        
+            <button type="button" class="btn btn-primary my-1" onclick="">Kid</button> 
+      
+      </div>
     </div>
-  </div>
- <!--
-<div class="card1">
-  <img src="male.png" alt="male" style="width:100%">
-  <div class="container">
-      <button type="button" class="button" onclick="">Male</button> 
-  </div>
-</div>
-<div class="card2">
-  <img src="female.png" alt="female" style="width:100%">
-  <div class="container">
-      <button type="button" class="button" onclick="">Female</button> 
-  </div>
-</div>
-<div class="card3">
-  <img src="kids.png" alt="kid" style="width:100%">
-  <div class="container">
-      <button type="button" class="button" onclick="">Kid</button> 
-  </div>
-</div>
-<div class="card4">
-  <img src="medical.jpg" alt="medical" style="width:100%">
-  <div class="container4">
-      <button type="button" class="button" onclick="">Medical Center</button> 
-  </div>
+    <div class='col-4'>
+      <div class="card4 form-group">
+        <img src="medical.jpg" alt="medical" style="width:100%">
+        
+            <button type="button" class="btn btn-primary my-1" onclick="">Medical Center</button> 
+      
+      </div>
+    </div> 
+ </div>
 </div>
 
--->
-</div>
  <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
