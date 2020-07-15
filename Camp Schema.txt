@@ -1,0 +1,119 @@
+drop table If Exists Area;
+drop table If Exists Family;
+drop table If Exists Male;
+drop table If Exists Female;
+drop table If Exists Children;
+drop table If Exists Stock;
+drop table If Exists Fund;
+drop table If Exists Patient;
+drop table If Exists Volunteer;
+
+
+Create Table Area (
+	Sector_no		    Int		Not Null            Primary Key,
+        Noof_male                   Int         Not Null,
+        Noof_female                   Int         Not Null,
+        Noof_children                  Int         Not Null,
+        Noof_volunteer                   Int         Not Null
+	);
+
+Create Table Family (
+	Id 	                    Int         Not Null             Primary Key,
+	Sector_no                   Int		Not Null,
+	
+ FOREIGN KEY (Sector_no) REFERENCES Area(Sector_no)
+);
+
+Create Table Male (
+	NId 	   	             Int	   Not Null              Primary Key,
+	Name		             VarChar(50)   Not Null,
+        	  
+	Age  	                     Int           Not Null,
+	Relief	                     ENUM('Y','N') DEFAULT 'N',
+        Family_Id 	             Int 		,
+        Sector_no                    Int,
+ FOREIGN KEY (Sector_no) REFERENCES Area(Sector_no),
+ FOREIGN KEY (Family_Id) REFERENCES Family(Id)	
+	
+);
+Create Table Female (
+	NId 	   	              Int	      Not Null           Primary Key,
+	Name		              VarChar(50)     Not Null,
+        	  
+	Age  	                      Int,
+	Relief	                      ENUM('Y','N') DEFAULT 'N',
+	Family_Id 	              Int,
+        Sector_no                     Int,
+ FOREIGN KEY (Sector_no) REFERENCES Area(Sector_no),
+ FOREIGN KEY (Family_Id) REFERENCES Family(Id)	
+);
+Create Table Children (
+	Id 	   	               Int	       Not Null             Primary Key,
+	Name		               VarChar(50)     Not Null,
+        	  
+	Age  	                       Int              Not Null,
+	Gender                         VarChar(50)      Not Null,
+        Father_name                    Varchar(50),
+        Mother_name                    Varchar(50),
+        Male_Id                        Int,
+        Female_Id                      Int ,
+	Family_Id 	               Int,
+       Sector_no                       Int             Not Null,
+ FOREIGN KEY (Female_Id) REFERENCES Female(NId),
+ FOREIGN KEY (Male_Id) REFERENCES Male(NId),
+FOREIGN KEY (Family_Id) REFERENCES Family(Id),
+ FOREIGN KEY (Sector_no) REFERENCES Area(Sector_no)
+	
+);
+Create Table Volunteer (
+	Id 	   	Int	Not Null Primary Key,
+	Name		VarChar(50) Not Null,
+         	  
+   	Age  	        Int,
+	Phn_no          BIGInt,
+        Sector_no        Int,
+  FOREIGN KEY (Sector_no) REFERENCES Area(Sector_no)
+ 	
+);
+Create Table Patient_Record (
+	Id 	   	Int	Not Null Primary Key,
+	Name		VarChar(50) Not Null,
+        	  
+	Age  	        Int,
+        Status       Varchar(50) Not Null,
+        
+	Room_No         Int    Not Null,
+        Bed_No           Int    Not Null,
+        
+        
+	Female_Id 	Int    ,
+	Male_Id    	Int,
+        Child_Id        Int,
+ FOREIGN KEY (Female_Id) REFERENCES Female(NId),
+FOREIGN KEY (Child_Id) REFERENCES Children(Id),
+ FOREIGN KEY (Male_Id) REFERENCES Male(NId)
+
+      
+	
+);
+
+Create Table Stock (
+	Sector_no  	   Int 	   Not Null Primary Key,
+	Stock_name         VarChar(20), 
+	Amount 		   Int     Not Null,
+	Unit 	   	   Varchar(10)
+	
+	);
+Create Table Fund (
+	Sector_no  	   Int 	   Not Null ,
+	Date               Date    Not Null,
+	Spend_money 	   Int  Not Null,
+	Remaining 	   Int  Not Null,	
+	
+	Primary Key(Sector_no,Date)
+);
+
+
+
+
+

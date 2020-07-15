@@ -1,0 +1,47 @@
+insert into Area values(1,4);
+insert into Area values(2);
+insert into Area values(3);
+insert into Area values(4);
+insert into Area values(5);
+
+
+insert into Family values(1,1);
+insert into Family values(2,1);
+insert into Family values(3,2);
+insert into Family values(4,5);
+insert into Family values(5,3);
+insert into Family values(6,3);
+
+
+
+insert into Male values(1,'kamal',20,'N',1,1);
+insert into Male values(2,'jamal',30,'N',2,1);
+insert into Male values(3,'gamal',40,'N',1,1);
+insert into Male values(4,'hamal',50,'N',3,2);
+iinsert into Male values(1,'pamal',20,'N',1,1);
+
+insert into Female values(1,'rohima',60,'N',5,3);
+insert into Female values(2,'korima',20,'N',1,1);
+insert into Female values(3,'forima',30,'N',2,1);
+insert into Female values(4,'torima',60,'N',3,2);
+insert into Female values(5,'iorima',70,'N',4,5);
+
+insert into Children values(5,'Fatema',10,'male','karim','korima',1,2,1,1);
+insert into Children values(1,'rohim',7,'male','karim','korima',1,2,1,1);
+insert into Children values(2,'shila',7,'female','karim','korima',1,2,1,1);
+insert into Children values(6,'ttt',10,'male','karim','korima',1,2,1,1);
+
+
+insert into Volunteer values(1,'ddxdd',77,987654323,1);
+insert into Volunteer values(2,'ddd',80,987654323,1);
+
+insert into Volunteer values(3,'hyjuj',12,987654323,1);
+
+insert into Volunteer values(4,'ewwew',56,987654323,1);
+
+
+
+insert into Patient values(1,'dsds',23,)
+
+insert into stock values(sector no, stock name , amount, unit)
+insert into fund values(sector no, date , spend money, remaining)

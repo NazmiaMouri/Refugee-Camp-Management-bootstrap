@@ -1,0 +1,27 @@
+
+h1{
+	position:relative;
+	left:10px;
+	color:#32AEFF;
+}
+table{
+	overflow:auto;
+	
+	table-layout:auto;
+	position:relative;
+	left:50px;
+	top:20px;
+	
+	
+	
+}
+ th  {
+    border: 1px solid black;
+    border-collapse: collapse;
+	 
+}
+ td {
+    border: 1px solid black;
+    border-collapse: collapse;
+	 background-color: #92C8F9;
+}

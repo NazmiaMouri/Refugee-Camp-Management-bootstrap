@@ -1,0 +1,32 @@
+h1{
+	position:relative;
+	left:10px;
+	color:#32AEFF;
+}
+table{
+	overflow:auto;
+	
+	table-layout:auto;
+	position:relative;
+	left:30px;
+	top:20px;
+	 
+	border-collapse:collapse;
+	
+	
+}
+ th td{
+	 width:200px;
+    border: 1px solid black;
+    border-collapse: collapse;
+	padding: 8px;
+	 
+}
+ 
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+#btnAdd{
+	background-color:#32AEFF;
+	padding: 8px 30px;
+	margin-left:10px;}
